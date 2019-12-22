@@ -1,5 +1,6 @@
 (ns kda-deployer.core
-  (:use [clojure.java.shell]))
+  (:use [clojure.java.shell])
+  (:require [kda-deployer.aws :as aws]))
 
 (defn build-kda-processor[]
   )
