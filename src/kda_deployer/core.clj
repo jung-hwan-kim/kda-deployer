@@ -50,7 +50,7 @@
         mvn-build-result (mvn-build kda-job-dir)
         ]
     (if (= mvn-build-result 0)
-      (let [result deploy-kda-job]
+      (let [result (deploy-kda-job)]
         (println result))
       (println "BUILD FAILED"))))
 
