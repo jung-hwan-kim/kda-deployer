@@ -10,7 +10,7 @@
 
 (defn mvn-build [dir]
   (println "mvn-build:" dir)
-  (let [result (sh "mvn" "clean" "package" :dir dir)]
+  (let [result (sh "mvn" "clean" "compile" "clojure:compile" "package" :dir dir)]
     (println (:out result))
     (:exit result)))
 
