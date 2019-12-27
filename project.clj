@@ -6,5 +6,5 @@
   :java-source-paths ["main/java"]
   :javac-options     ["-target" "1.8" "-source" "1.8"]
   :repl-options {:init-ns kda-deployer.core}
-  :main kda-deployer.core/-main
+  :main kda-deployer.main/-main
   :aot :all)

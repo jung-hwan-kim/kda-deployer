@@ -1,6 +1,6 @@
 (ns kda-deployer.core-test
   (:require [clojure.test :refer :all]
-            [kda-deployer.core :refer :all]))
+            [kda-deployer.main :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
