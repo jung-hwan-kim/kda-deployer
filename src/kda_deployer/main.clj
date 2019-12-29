@@ -82,8 +82,8 @@
 
 (defn do-deploy-local[args]
   (println "[DEPLOY LOCAL]")
-;  (build-task)
-;  (build-job)
+  (build-task)
+  (build-job)
   (deploy-and-run-in-local)
   (shutdown-agents)
   )
