@@ -89,7 +89,7 @@
   (println "[DEPLOY AWS")
   (build-task)
   (build-job app-name)
-  (deploy-job-to-aws)
+  (deploy-job-to-aws app-name)
   (shutdown-agents)
   )
 (defn do-stuff[app-name]
