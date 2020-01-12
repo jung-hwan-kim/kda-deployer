@@ -81,16 +81,14 @@
 
 (defn do-deploy-local[app-name]
   (println "[DEPLOY LOCAL]")
-  (if (= app-name "kda-job")
-    (build-task))
+  (build-task)
   (build-job app-name)
   (run-in-local app-name)
   (shutdown-agents)
   )
 (defn do-deploy-aws[app-name]
   (println "[DEPLOY AWS")
-  (if (= app-name "kda-job")
-    (build-task))
+  (build-task)
   (build-job app-name)
   (deploy-job-to-aws app-name)
   (shutdown-agents)
