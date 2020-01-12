@@ -73,7 +73,7 @@
 
 (defn do-build[app-name]
   (println "[BUILD]")
-  (if (= app-name "ds-kda-job")
+  (if (= app-name "kda-job")
     (build-task))
   (build-job app-name)
   (shutdown-agents)
@@ -81,7 +81,7 @@
 
 (defn do-deploy-local[app-name]
   (println "[DEPLOY LOCAL]")
-  (if (= app-name "ds-kda-job")
+  (if (= app-name "kda-job")
     (build-task))
   (build-job app-name)
   (run-in-local app-name)
@@ -89,7 +89,7 @@
   )
 (defn do-deploy-aws[app-name]
   (println "[DEPLOY AWS")
-  (if (= app-name "ds-kda-job")
+  (if (= app-name "")
     (build-task))
   (build-job app-name)
   (deploy-job-to-aws app-name)
@@ -103,10 +103,10 @@
   "Deploying kda main"
   [command & args]
   (case command
-    "build" (do-build (or (first args) "ds-kda-job"))
-    "deploy-local" (do-deploy-local (or (first args) "ds-kda-job"))
-    "deploy-aws" (do-deploy-aws (or (first args) "ds-kda-job"))
-    "test" (do-stuff  (or (first args) "ds-kda-job"))
+    "build" (do-build (or (first args) "kda-job"))
+    "deploy-local" (do-deploy-local (or (first args) "kda-job"))
+    "deploy-aws" (do-deploy-aws (or (first args) "kda-job"))
+    "test" (do-stuff  (or (first args) "kda-job"))
     (println "Build & Deploy - options: deploy-local, deploy-aws, .. exiting without doing anything.")
     )
   )
