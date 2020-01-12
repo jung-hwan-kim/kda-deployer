@@ -89,7 +89,7 @@
   )
 (defn do-deploy-aws[app-name]
   (println "[DEPLOY AWS")
-  (if (= app-name "")
+  (if (= app-name "kda-job")
     (build-task))
   (build-job app-name)
   (deploy-job-to-aws app-name)
